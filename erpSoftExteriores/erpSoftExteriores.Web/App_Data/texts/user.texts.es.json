@@ -1,0 +1,17 @@
+{
+    "Db.Administration.User.Password": "Contraseña",
+    "Db.Administration.User.PasswordConfirm": "Confirmar contraseña",
+    "Db.Administration.User.PasswordHash": "Hash de Contraseña",
+    "Db.Administration.User.PasswordSalt": "Salt de Contraseña",
+    "Db.Administration.User.Username": "Usuario",
+    "Db.Administration.UserPermission.Username": "Usuario",
+    "Db.Administration.UserRole.Username": "Usuario",
+    "Forms.Membership.ChangePassword.FormTitle": "Cambiar contraseña",
+    "Forms.Membership.ChangePassword.NewPassword": "Nueva Contraseña",
+    "Forms.Membership.ChangePassword.OldPassword": "Contraseña anterior",
+    "Forms.Membership.ChangePassword.SubmitButton": "Cambiar Contraseña",
+    "Forms.Membership.ChangePassword.Success": "Su Contraseña fue cambiada",
+    "Forms.Membership.ForgotPassword.FormTitle": "Olvidé mi contraseña",
+    "Forms.Membership.ForgotPassword.SubmitButton": "Resetear mi contraseña",
+    "Forms.Membership.ForgotPassword.Success": "Se ha enviado un e-mail con instrucciones para restablecer la contraseña."
+}

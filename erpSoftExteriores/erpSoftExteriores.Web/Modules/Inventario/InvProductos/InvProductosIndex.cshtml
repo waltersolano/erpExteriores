@@ -1,0 +1,15 @@
+﻿
+@{
+    ViewData["Title"] = Serenity.LocalText.Get("Db.Inventario.InvProductos.EntityPlural");
+}
+
+<div id="GridDiv"></div>
+
+<script type="text/javascript">
+    jQuery(function () {
+        new erpSoftExteriores.Inventario.InvProductosGrid($('#GridDiv'), {}).init();
+
+        Q.initFullHeightGridPage($('#GridDiv'));
+    });
+</script>
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAKDmambjBwuBbd4MK9e237b2Yg2UP1L5Q&language=es"></script>

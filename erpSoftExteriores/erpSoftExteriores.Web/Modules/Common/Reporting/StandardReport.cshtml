@@ -1,0 +1,84 @@
+﻿@model erpSoftExteriores.Common.StandardReportData
+@if ((bool?)ViewData["Printing"] == true)
+{
+    Layout = MVC.Views.Shared._LayoutNoNavigation;
+
+    <script type="text/javascript">window.print()</script>
+}
+<section class="invoice">
+    <div class="row">
+        <div class="col-xs-12">
+            <h2 class="page-header">
+                @{
+                    var NameField = ((Serenity.Data.INameRow)Model.Order).NameField;
+                    var NameFieldColumnAlias = NameField.ColumnAlias;
+
+                    var IdField = (((Serenity.Data.IIdRow)Model.Order).IdField);
+                    var IdFieldColumnAlias = ((Serenity.Data.Field)IdField).ColumnAlias;
+
+                }
+
+
+                @(Model.Order.GetType().GetAttribute<Serenity.Data.InstanceNameAttribute>().InstanceName):
+                [@(Model.Order[IdFieldColumnAlias])]
+                @(Model.Order[NameFieldColumnAlias])
+
+
+
+                <small class="pull-right">Fecha: @DateTime.Now.ToShortDateString()</small>
+            </h2>
+        </div>
+    </div>
+
+    @for (var w = 0; w < Model.includeColumns.Length; w++)
+    {
+        foreach (var item in Model.Order.GetFields())
+        {
+
+
+
+            if (item.ColumnAlias == Model.includeColumns[w])
+            {
+                if (item.ColumnAlias != NameFieldColumnAlias && item.ColumnAlias != IdFieldColumnAlias)
+                {
+                    <div>
+                        <b>@item.Title:</b>
+                        <br>
+
+                        @{
+                            Boolean isImage = false;
+                            foreach (var elem in item.CustomAttributes)
+                            {
+                                if (elem.ToString().IndexOf("MultipleImageUploadEditorAttribute") > -1)
+                                {
+                                    string imagesString = Model.Order[item.ColumnAlias].ToString().Replace("Filename", "").Replace("},", "}},");
+                                    string[] images = imagesString.Split(new[] { "}," }, StringSplitOptions.None);
+                                    foreach (var img in images)
+                                    {
+                                        string src = img.Substring(0, img.IndexOf("OriginalName")).Replace(",", "").Replace("[{", "").Replace("{", "").Replace("\"", "").Replace(":", "");
+                                        <span><img src="/upload/@src" alt="producto" height="200" width="200"></span>
+                                    }
+                                    isImage = true;
+                                }
+
+
+                            }
+                            if (!isImage)
+                            {
+                                <span>@(Model.Order[item.ColumnAlias])</span>
+                            }
+                        }
+                    </div>
+                    <br>
+
+
+                }
+            }
+        }
+    }
+
+
+
+
+    <pre>@(Model.Order)</pre>
+</section>

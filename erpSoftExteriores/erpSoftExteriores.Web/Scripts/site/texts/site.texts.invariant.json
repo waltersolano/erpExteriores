@@ -1,0 +1,36 @@
+{
+
+  "Navigation.Dashboard": "Dashboard",
+  "Navigation.General/TipoIdentificacion": "Tipo de Identificación",
+
+
+  "Permission.AdministradorDeSistema": "Administrador de Sistema",
+  "Permission.Administration:": "Administration",
+  "Permission.Administration:Security": "User, Role Management and Permissions",
+  "Permission.Administration:Translation": "Languages and Translations",
+
+    "Db.General.GenDivisionesAdministrativas.PrimerNivel": "Provincia(s)",
+  "Db.General.GenDivisionesAdministrativas.SegundoNivel": "Cantón(es)",
+  "Db.General.GenDivisionesAdministrativas.TercerNivel": "Distrito(s)",
+  "Db.General.GenDivisionesAdministrativas.CuartoNivel": "--Nivel--",
+  "Db.General.GenDivisionesAdministrativas.QuintoNivel" : "--Nivel--",
+
+  "Permission.General:MantenimientoGeneral:DivisionesAdministrativas:Actualizar": "Actualizar",
+  "Permission.General:MantenimientoGeneral:DivisionesAdministrativas:Borrar": "Borrar",
+  "Permission.General:MantenimientoGeneral:DivisionesAdministrativas:Insertar": "Insertar",
+  "Permission.General:MantenimientoGeneral:DivisionesAdministrativas:Leer": "Leer",
+  "Permission.General:MantenimientoGeneral:DivisionesAdministrativas:Modificar": "Modificar",
+
+  "Permission.General:MantenimientoGeneral:Insertar": "Insertar",
+  "Permission.General:MantenimientoGeneral:Leer": "Leer",
+  "Permission.General:MantenimientoGeneral:Actualizar": "Actualizar",
+  "Permission.General:MantenimientoGeneral:Borrar": "Borrar",
+  "Permission.General:MantenimientoGeneral:Modificar": "Modificar",
+  "Permission.General:MantenimientoGeneral:PaginaDivisionAdministrativaN1": "Página División Administrativa N1",
+  "Permission.General:MantenimientoGeneral:PaginaDivisionAdministrativaN2": "Página División Administrativa N2",
+  "Permission.General:MantenimientoGeneral:PaginaDivisionAdministrativaN3": "Página División Administrativa N3",
+  "Permission.General:MantenimientoGeneral:PaginaDivisionAdministrativaN4": "Página División Administrativa N4",
+  "Permission.General:MantenimientoGeneral:PaginaDivisionAdministrativaN5": "Página División Administrativa N5",
+
+  "Permission.General:PaginaMantenimientoGeneral": "Pagina de Mantenimiento General"
+}

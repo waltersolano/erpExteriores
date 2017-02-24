@@ -1,0 +1,18 @@
+﻿namespace erpSoftExteriores.DialogUtils {
+    export function pendingChangesConfirmation(element: JQuery, hasPendingChanges: () => boolean) {
+        element.bind('dialogbeforeclose', function (e) {
+            if (!Serenity.WX.hasOriginalEvent(e) || !hasPendingChanges()) {
+                return;
+            }
+
+            e.preventDefault();
+            Q.confirm('Tiene cambios pendientes. Desea guardarlos?',
+                () => element.find('div.save-and-close-button').click(),
+                {
+                    onNo: function () {
+                        element.dialog().dialog('close');
+                    }
+                });
+        });
+    }
+}

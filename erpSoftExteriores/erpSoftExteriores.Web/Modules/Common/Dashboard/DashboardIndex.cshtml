@@ -1,0 +1,32 @@
+﻿
+@using erpSoftExteriores.Northwind;
+@using erpSoftExteriores.Northwind.Entities;
+@using erpSoftExteriores.General.Entities;
+@using erpSoftExteriores.General.Endpoints;
+@using erpSoftExteriores.General.Repositories;
+@using Serenity;
+@using Serenity.Data;
+@using Serenity.Services;
+@using System;
+@using System.Web.Mvc;
+@using System.Web.Security;
+@using MyRepository = erpSoftExteriores.General.Repositories.GenDivisionesAdministrativasRepository;
+@using MyRow = erpSoftExteriores.General.Entities.GenDivisionesAdministrativasRow;
+
+@{
+    //var connection = SqlConnections.NewFor<GenDivisionesAdministrativasRow>();
+    var connection = SqlConnections.NewByKey("Default");
+    var request = new Serenity.Services.ListRequest();
+    var response = new MyRepository().List(connection, request);
+}
+
+<p>Respuesta es : @response.Entities[0].SegundoNivel </p>
+
+
+
+
+
+
+
+
+
